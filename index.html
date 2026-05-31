@@ -10,7 +10,6 @@
     body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: #fff; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
     .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 
-    /* Hero */
     .hero { background: #000; color: #fff; padding: 80px 24px; text-align: center; }
     .hero-logo { display: inline-flex; align-items: center; justify-content: center; width: 72px; height: 72px; background: #2563eb; border-radius: 20px; margin-bottom: 24px; }
     .hero-logo svg { width: 36px; height: 36px; fill: #fff; }
@@ -18,16 +17,14 @@
     .hero p { font-size: 18px; color: #9ca3af; max-width: 600px; margin: 0 auto 32px; }
     .hero p strong { color: #fff; }
     .hero-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-    .btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; background: #2563eb; color: #fff; border-radius: 10px; text-decoration: none; font-size: 16px; font-weight: 600; transition: background 0.2s; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; background: #2563eb; color: #fff; border-radius: 10px; text-decoration: none; font-size: 16px; font-weight: 600; border: none; cursor: pointer; transition: background 0.2s; }
     .btn-primary:hover { background: #1d4ed8; }
-    .btn-outline { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; border: 1px solid #4b5563; color: #d1d5db; border-radius: 10px; text-decoration: none; font-size: 16px; font-weight: 500; transition: background 0.2s; }
+    .btn-outline { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; border: 1px solid #4b5563; color: #d1d5db; border-radius: 10px; text-decoration: none; font-size: 16px; font-weight: 500; background: none; cursor: pointer; transition: background 0.2s; }
     .btn-outline:hover { background: #1f2937; }
 
-    /* Sections */
     section { padding: 80px 24px; }
     section h2 { font-size: 28px; font-weight: 700; text-align: center; margin-bottom: 48px; }
 
-    /* Highlights */
     .highlights { background: #f9fafb; }
     .highlights-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; max-width: 1000px; margin: 0 auto; }
     .highlight-item { text-align: center; }
@@ -36,7 +33,6 @@
     .highlight-item h3 { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
     .highlight-item p { font-size: 14px; color: #6b7280; }
 
-    /* Features */
     .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; max-width: 1000px; margin: 0 auto; }
     .feature-card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 20px; transition: border-color 0.2s; }
     .feature-card:hover { border-color: #9ca3af; }
@@ -45,20 +41,41 @@
     .feature-card h3 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
     .feature-card p { font-size: 13px; color: #6b7280; line-height: 1.5; }
 
-    /* CTA */
     .cta { background: #000; color: #fff; text-align: center; }
     .cta h2 { margin-bottom: 12px; }
     .cta p { color: #9ca3af; margin-bottom: 24px; font-size: 16px; }
     .cta-price { font-size: 40px; font-weight: 700; color: #60a5fa; margin-bottom: 32px; }
     .cta-price span { font-size: 18px; color: #6b7280; font-weight: 400; }
 
-    /* Footer */
     footer { padding: 32px 24px; text-align: center; font-size: 13px; color: #9ca3af; border-top: 1px solid #f3f4f6; }
+
+    /* Modal */
+    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 100; align-items: center; justify-content: center; padding: 20px; }
+    .modal-overlay.active { display: flex; }
+    .modal { background: #fff; color: #1a1a1a; border-radius: 16px; padding: 40px; max-width: 480px; width: 100%; max-height: 90vh; overflow-y: auto; }
+    .modal h3 { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+    .modal p { font-size: 14px; color: #6b7280; margin-bottom: 24px; }
+    .modal-close { float: right; background: none; border: none; font-size: 24px; cursor: pointer; color: #9ca3af; padding: 0 4px; }
+    .modal-close:hover { color: #1a1a1a; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 13px; font-weight: 500; color: #374151; margin-bottom: 4px; }
+    .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 10px 14px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; outline: none; transition: border 0.2s; font-family: inherit; }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: #2563eb; }
+    .form-group textarea { resize: vertical; min-height: 80px; }
+    .form-group select { background: #fff; cursor: pointer; }
+    .form-footer { font-size: 12px; color: #9ca3af; margin-top: 12px; text-align: center; }
+    .success-msg { display: none; text-align: center; padding: 20px 0; }
+    .success-msg.active { display: block; }
+    .success-msg .check { width: 56px; height: 56px; background: #d1fae5; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+    .success-msg .check svg { width: 24px; height: 24px; fill: #059669; }
+    .success-msg h4 { font-size: 18px; margin-bottom: 4px; }
+    .success-msg p { color: #6b7280; font-size: 14px; margin: 0; }
 
     @media (max-width: 640px) {
       .hero h1 { font-size: 28px; }
       section { padding: 48px 16px; }
       section h2 { font-size: 22px; margin-bottom: 32px; }
+      .modal { padding: 24px; }
     }
   </style>
 </head>
@@ -72,11 +89,11 @@
     <h1>Sistema de Gestão para Restaurantes</h1>
     <p>PDV, cardápio digital, estoque, relatórios, cozinha e muito mais. <strong>Pagamento único, sem mensalidades.</strong></p>
     <div class="hero-buttons">
-      <a href="mailto:danteproprey@gmail.com" class="btn-primary">
+      <button onclick="openForm('Demonstração')" class="btn-primary">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         Solicitar Demonstração
-      </a>
-      <a href="https://danteproprey.github.io/menupro-landing" class="btn-outline">Saiba Mais</a>
+      </button>
+      <button onclick="openForm('Compra')" class="btn-outline">Quero Comprar</button>
     </div>
   </div>
 
@@ -164,10 +181,10 @@
       <h2>Pronto para digitalizar seu restaurante?</h2>
       <p>Solicite uma demonstração ou adquira agora mesmo. Suporte incluso.</p>
       <div class="cta-price">R$ 3.500<span> à vista</span></div>
-      <a href="mailto:danteproprey@gmail.com?subject=Quero%20comprar%20o%20MenuPro" class="btn-primary">
+      <button onclick="openForm('Compra')" class="btn-primary" style="font-size:16px;padding:14px 40px;">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         Comprar Agora
-      </a>
+      </button>
     </div>
   </section>
 
@@ -177,5 +194,90 @@
     <p style="margin-top:4px;">Pagamento único. Licença vitalícia. Suporte via email.</p>
   </footer>
 
+  <!-- Modal -->
+  <div class="modal-overlay" id="modal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeForm()">&times;</button>
+      <div id="formContent">
+        <h3 id="modalTitle">Solicitar Demonstração</h3>
+        <p>Preencha seus dados que entraremos em contato.</p>
+        <form onsubmit="submitForm(event)" id="contactForm">
+          <input type="hidden" name="_subject" id="subjectInput" value="Demonstração MenuPro">
+          <div class="form-group">
+            <label>Nome</label>
+            <input type="text" name="name" required placeholder="Seu nome completo">
+          </div>
+          <div class="form-group">
+            <label>WhatsApp</label>
+            <input type="tel" name="phone" required placeholder="(11) 99999-8888">
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" required placeholder="seu@email.com">
+          </div>
+          <div class="form-group">
+            <label>Nome do Restaurante</label>
+            <input type="text" name="restaurant" placeholder="Opcional">
+          </div>
+          <div class="form-group">
+            <label>Mensagem</label>
+            <textarea name="message" placeholder="Conte um pouco sobre o que precisa..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:12px;">
+            Enviar
+          </button>
+          <div class="form-footer">Seus dados não serão compartilhados.</div>
+        </form>
+      </div>
+      <div class="success-msg" id="successMsg">
+        <div class="check">
+          <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+        </div>
+        <h4>Recebemos sua mensagem!</h4>
+        <p>Entraremos em contato em até 24h úteis.</p>
+        <button onclick="closeForm()" class="btn-primary" style="margin-top:20px;">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const FORMSPREE_ID = 'mzdwqvpw';
+
+    function openForm(type) {
+      document.getElementById('subjectInput').value = type === 'Compra' ? 'Quero comprar o MenuPro' : 'Quero uma demonstração';
+      document.getElementById('modalTitle').textContent = type === 'Compra' ? 'Quero Comprar' : 'Solicitar Demonstração';
+      document.getElementById('formContent').style.display = 'block';
+      document.getElementById('successMsg').classList.remove('active');
+      document.getElementById('contactForm').reset();
+      document.getElementById('modal').classList.add('active');
+    }
+
+    function closeForm() {
+      document.getElementById('modal').classList.remove('active');
+    }
+
+    function submitForm(e) {
+      e.preventDefault();
+      const form = e.target;
+      const data = new FormData(form);
+
+      fetch('https://formspree.io/f/' + FORMSPREE_ID, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(r => {
+        if (r.ok) {
+          document.getElementById('formContent').style.display = 'none';
+          document.getElementById('successMsg').classList.add('active');
+        }
+      }).catch(() => {
+        alert('Erro ao enviar. Tente novamente.');
+      });
+    }
+
+    document.getElementById('modal').addEventListener('click', function(e) {
+      if (e.target === this) closeForm();
+    });
+  </script>
 </body>
 </html>
