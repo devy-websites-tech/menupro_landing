@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MenuPro — Sistema de Gestão para Restaurantes</title>
+  <meta name="description" content="Sistema completo de gestão para restaurantes. PDV, cardápio digital, estoque, relatórios. Pagamento único, sem mensalidades." />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: #fff; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+    /* Hero */
+    .hero { background: #000; color: #fff; padding: 80px 24px; text-align: center; }
+    .hero-logo { display: inline-flex; align-items: center; justify-content: center; width: 72px; height: 72px; background: #2563eb; border-radius: 20px; margin-bottom: 24px; }
+    .hero-logo svg { width: 36px; height: 36px; fill: #fff; }
+    .hero h1 { font-size: 40px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 12px; }
+    .hero p { font-size: 18px; color: #9ca3af; max-width: 600px; margin: 0 auto 32px; }
+    .hero p strong { color: #fff; }
+    .hero-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; background: #2563eb; color: #fff; border-radius: 10px; text-decoration: none; font-size: 16px; font-weight: 600; transition: background 0.2s; }
+    .btn-primary:hover { background: #1d4ed8; }
+    .btn-outline { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; border: 1px solid #4b5563; color: #d1d5db; border-radius: 10px; text-decoration: none; font-size: 16px; font-weight: 500; transition: background 0.2s; }
+    .btn-outline:hover { background: #1f2937; }
+
+    /* Sections */
+    section { padding: 80px 24px; }
+    section h2 { font-size: 28px; font-weight: 700; text-align: center; margin-bottom: 48px; }
+
+    /* Highlights */
+    .highlights { background: #f9fafb; }
+    .highlights-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; max-width: 1000px; margin: 0 auto; }
+    .highlight-item { text-align: center; }
+    .highlight-icon { width: 56px; height: 56px; background: #000; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+    .highlight-icon svg { width: 28px; height: 28px; fill: #fff; }
+    .highlight-item h3 { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+    .highlight-item p { font-size: 14px; color: #6b7280; }
+
+    /* Features */
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; max-width: 1000px; margin: 0 auto; }
+    .feature-card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 20px; transition: border-color 0.2s; }
+    .feature-card:hover { border-color: #9ca3af; }
+    .feature-icon { width: 40px; height: 40px; background: #f3f4f6; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+    .feature-icon svg { width: 20px; height: 20px; fill: #374151; }
+    .feature-card h3 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+    .feature-card p { font-size: 13px; color: #6b7280; line-height: 1.5; }
+
+    /* CTA */
+    .cta { background: #000; color: #fff; text-align: center; }
+    .cta h2 { margin-bottom: 12px; }
+    .cta p { color: #9ca3af; margin-bottom: 24px; font-size: 16px; }
+    .cta-price { font-size: 40px; font-weight: 700; color: #60a5fa; margin-bottom: 32px; }
+    .cta-price span { font-size: 18px; color: #6b7280; font-weight: 400; }
+
+    /* Footer */
+    footer { padding: 32px 24px; text-align: center; font-size: 13px; color: #9ca3af; border-top: 1px solid #f3f4f6; }
+
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 28px; }
+      section { padding: 48px 16px; }
+      section h2 { font-size: 22px; margin-bottom: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-logo">
+      <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3V3zm2 2v14h14V5H5zm3 3h8v2H8V8zm0 4h8v2H8v-2zm0 4h5v2H8v-2z"/></svg>
+    </div>
+    <h1>Sistema de Gestão para Restaurantes</h1>
+    <p>PDV, cardápio digital, estoque, relatórios, cozinha e muito mais. <strong>Pagamento único, sem mensalidades.</strong></p>
+    <div class="hero-buttons">
+      <a href="mailto:contato@menupro.com.br" class="btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        Solicitar Demonstração
+      </a>
+      <a href="https://danteproprey.github.io/menupro-landing" class="btn-outline">Saiba Mais</a>
+    </div>
+  </div>
+
+  <!-- Highlights -->
+  <section class="highlights">
+    <div class="container">
+      <h2>Por que escolher o MenuPro?</h2>
+      <div class="highlights-grid">
+        <div class="highlight-item">
+          <div class="highlight-icon"><svg viewBox="0 0 24 24"><path d="M20 3H4v18h16V3zm-2 16H6V5h12v14zm-5-7h4v2h-4v-2zm-6-4h10v2H7V8zm0 4h4v2H7v-2z"/></svg></div>
+          <h3>Acesso via Navegador</h3>
+          <p>Funciona em qualquer PC, tablet ou celular da rede. Sem instalação por estação.</p>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15H9V9h2v8zm4 0h-2V9h2v8z"/></svg></div>
+          <h3>Pagamento Único</h3>
+          <p>Nada de mensalidades. Pague uma vez e use para sempre.</p>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-icon"><svg viewBox="0 0 24 24"><path d="M17 1H7v2h10V1zm-5 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/></svg></div>
+          <h3>Cardápio Digital</h3>
+          <p>QR Code na mesa. Cliente vê o cardápio no celular e pede sem garçom.</p>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-icon"><svg viewBox="0 0 24 24"><path d="M19 3H5v18h14V3zm-2 16H7V5h10v14zM9 7h6v2H9V7zm0 4h6v2H9v-2zm0 4h4v2H9v-2z"/></svg></div>
+          <h3>Backup Automático</h3>
+          <p>Backup do banco de dados a cada hora. Seus dados sempre seguros.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section>
+    <div class="container">
+      <h2>Tudo que seu restaurante precisa</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.5 5h14.5L17 13H7L5.5 5z"/></svg></div>
+          <h3>PDV Completo</h3>
+          <p>Interface rápida para lançar pedidos com modificadores, mesas e múltiplos tipos de entrega.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M3 13h18v8H3v-8zm0-10h18v8H3V3z"/></svg></div>
+          <h3>Gestão de Pedidos</h3>
+          <p>Acompanhe o status em tempo real: Pendente, Preparando, Pronto, Entregue.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4v16h16V4zm-2 14H6V6h12v12z"/></svg></div>
+          <h3>Painel da Cozinha</h3>
+          <p>Visualização dedicada para a cozinha com atualização automática e notificação sonora.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M19 3H5v18h14V3zm-2 16H7V5h10v14z"/></svg></div>
+          <h3>Relatórios</h3>
+          <p>Vendas diárias, ticket médio, itens mais vendidos, formas de pagamento. Exporte CSV.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 3-1.34 3-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm8 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm-8 0c-.29 0-.62.02-.97.05C7.03 13.05 7 13.27 7 13.5V15h4v-1.5c0-.23-.03-.45-.03-.68C10.62 13.02 10.29 13 10 13z"/></svg></div>
+          <h3>Clientes</h3>
+          <p>Cadastro completo com histórico de pedidos, visitas e total gasto.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M20 2H4v20h16V2zm-2 18H6V4h12v16zM9 7h6v2H9V7zm0 4h6v2H9v-2zm0 4h4v2H9v-2z"/></svg></div>
+          <h3>Estoque</h3>
+          <p>Controle de entrada/saída, alerta de estoque baixo, movimentações e valor estimado.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3V3zm2 2v14h14V5H5zm3 3h8v2H8V8zm0 4h8v2H8v-2zm0 4h5v2H8v-2z"/></svg></div>
+          <h3>Mesas</h3>
+          <p>Organização por áreas, layout visual, controle de status livre/ocupado.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15H9V9h2v8zm4 0h-2V9h2v8z"/></svg></div>
+          <h3>Multi-usuário</h3>
+          <p>Níveis de acesso: Admin, Gerente, Operador, Garçom, Cozinha.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <h2>Pronto para digitalizar seu restaurante?</h2>
+      <p>Solicite uma demonstração ou adquira agora mesmo. Suporte incluso.</p>
+      <div class="cta-price">R$ 3.500<span> à vista</span></div>
+      <a href="mailto:contato@menupro.com.br?subject=Quero%20comprar%20o%20MenuPro" class="btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        Comprar Agora
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p><strong>MenuPro</strong> — Sistema de Gestão para Restaurantes</p>
+    <p style="margin-top:4px;">Pagamento único. Licença vitalícia. Suporte via email.</p>
+  </footer>
+
+</body>
+</html>
